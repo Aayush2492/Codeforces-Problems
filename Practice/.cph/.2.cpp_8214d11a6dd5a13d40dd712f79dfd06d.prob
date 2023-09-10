@@ -1,0 +1,1 @@
+{"name":"Local: 2","url":"/Users/aayush/Code_Shits/CP-Reborn/Practice/2.cpp","tests":[{"id":1692943681712,"input":"7 3 1\n8\n5\n111\n17\n","output":"0"},{"id":1692943688246,"input":"3 3 3\n1\n2\n3\n4","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/aayush/Code_Shits/CP-Reborn/Practice/2.cpp","group":"local","local":true}

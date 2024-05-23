@@ -26,6 +26,31 @@ ostream &operator<<(ostream &os, const VEC<S> &vector)
 
 void solve()
 {
+    int n, k;
+    cin >> n >> k;
+    VEC<LLI> a(n, 0);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    sort(a.begin(), a.end());
+
+    int count = 1;
+    LLI max_ans = 0;
+    while (count <= k)
+    {
+        max_ans += a[n - 2 * count];
+        count += 1;
+    }
+
+    LLI min_ans = 0;
+    for (int i = 0; i < k - 1; i++)
+    {
+        min_ans += a[i];
+    }
+    min_ans += a[n - k - 1];
+
+    cout << min_ans << " " << max_ans << "\n";
 }
 
 int main()

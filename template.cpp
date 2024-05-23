@@ -47,6 +47,9 @@ bool cmp(const std::vector<int> &a, const std::vector<int> &b)
     return a[0] < b[0];
 }
 // std::sort(intervals.begin(), intervals.end(), cmp);
+// sort(vec.begin(), vec.end(), [](const auto& lhs, const auto& rhs) { // descending
+//             return lhs.first > rhs.first;
+//         });
 
 class UnionFind
 {

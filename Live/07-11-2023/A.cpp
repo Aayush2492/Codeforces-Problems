@@ -26,6 +26,23 @@ ostream &operator<<(ostream &os, const VEC<S> &vector)
 
 void solve()
 {
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+
+    if (s[n - 1] == 'A')
+    {
+        cout << "A\n";
+    }
+    else if (s[n - 1] == 'B')
+    {
+        cout << "B\n";
+    }
+    else
+    {
+        cout << "?\n";
+    }
 }
 
 int main()

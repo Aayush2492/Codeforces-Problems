@@ -26,6 +26,25 @@ ostream &operator<<(ostream &os, const VEC<S> &vector)
 
 void solve()
 {
+    int n;
+    cin >> n;
+    VEC<LLI> a(2 * n, 0);
+    FOR(i, 2 * n)
+    {
+        cin >> a[i];
+    }
+    sort(a.begin(), a.end());
+    LLI ans = 0;
+    for (int i = 0; i <= n - 2; i++)
+    {
+        ans += a[i + 1] - a[i];
+        ans += a[i + 1 + n] - a[i + n];
+    }
+    cout << ans << "\n";
+    for (int i = 0; i <= n - 1; i++)
+    {
+        cout << a[i] << " " << a[n + i] << "\n";
+    }
 }
 
 int main()

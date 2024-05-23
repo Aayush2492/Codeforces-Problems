@@ -15,26 +15,25 @@ using PTT = pair<T, T>;
 #define FOR(i, n) for (int i = 0; i < n; i++)
 #define ROF(i, n) for (int i = n - 1; i >= 0; i--)
 
-template <typename S>
-ostream &operator<<(ostream &os, const VEC<S> &vector)
-{
-    for (auto element : vector)
-        os << element << " ";
-    os << "\n";
-    return os;
-}
-
-void solve()
-{
-}
-
 int main()
 {
     int t;
     cin >> t;
     while (t--)
     {
-        solve();
+        LLI n, k, x;
+        cin >> n >> k >> x;
+        LLI low = (k * (k + 1)) / 2;
+        LLI high = k * n - ((k * (k - 1)) / 2);
+
+        if (x >= low && x <= high)
+        {
+            cout << "YES\n";
+        }
+        else
+        {
+            cout << "NO\n";
+        }
     }
     return 0;
 }

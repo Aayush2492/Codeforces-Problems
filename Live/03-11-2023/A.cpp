@@ -26,6 +26,22 @@ ostream &operator<<(ostream &os, const VEC<S> &vector)
 
 void solve()
 {
+    int x, y, k;
+    cin >> x >> y >> k;
+
+    if (y < x)
+    {
+        cout << x << "\n";
+        return;
+    }
+
+    // y > x
+    if (y - x <= k)
+    {
+        cout << y << "\n";
+        return;
+    }
+    cout << x + k + 2 * (y - x - k) << "\n";
 }
 
 int main()

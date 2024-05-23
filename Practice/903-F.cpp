@@ -16,10 +16,12 @@ using PTT = pair<T, T>;
 #define ROF(i, n) for (int i = n - 1; i >= 0; i--)
 
 template <typename S>
-ostream &operator<<(ostream &os, const VEC<S> &vector)
+std::ostream &operator<<(std::ostream &os, const std::vector<S> &vector)
 {
     for (auto element : vector)
+    {
         os << element << " ";
+    }
     os << "\n";
     return os;
 }

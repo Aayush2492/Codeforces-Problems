@@ -26,6 +26,36 @@ ostream &operator<<(ostream &os, const VEC<S> &vector)
 
 void solve()
 {
+    int n;
+    cin >> n;
+    int k;
+    cin >> k;
+
+    string s;
+    cin >> s;
+    int start = 0;
+    int dir = 1;
+
+    for (auto c : s)
+    {
+        // cout << start << "\n";
+        if (c == 'U')
+        {
+            start = (start + dir + n) % n;
+        }
+        else if (c == 'S')
+        {
+            start = (start + dir * 2 + n) % n;
+        }
+        else if (c == 'R')
+        {
+            dir *= -1;
+            start = (start + dir + n) % n;
+        }
+    }
+    // if (start == 0)
+    //     start = n;
+    cout << start + 1 << "\n";
 }
 
 int main()
